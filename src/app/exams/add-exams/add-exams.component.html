@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Add exams</h5>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="form">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Exam name</mat-label>
+            <input type="text" matInput formControlName="examName">
+          </mat-form-field>
+        </div>
+        <div class="form-group col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Exam date</mat-label>
+            <input type="date" matInput formControlName="examDate">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Exam duration</mat-label>
+            <input type="text" matInput formControlName="examDuration">
+          </mat-form-field>
+        </div>
+        <div class="form-group col-md-6">
+          <mat-form-field appearance="outline">
+            <mat-label>Exam URL</mat-label>
+            <input type="text" matInput formControlName="examURL">
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+    <button mat-flat-button [disabled]="!form.valid" color="primary" class="float-right" (click)="add(form.value)">Add</button>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import '~@angular/material/theming';
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+$mat-primary: (
+    50: #e4f3f2,
+    100: #bce2de,
+    200: #90cfc8,
+    300: #63bbb2,
+    400: #41ada2,
+    500: #209e91,
+    600: #1c9689,
+    700: #188c7e,
+    800: #138274,
+    900: #0b7062,
+    A100: #a2fff0,
+    A200: #6fffe8,
+    A400: #3cffe0,
+    A700: #23ffdb,
+    contrast: (
+        50: #ffffff,
+        100: #ffffff,
+        200: #ffffff,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #ffffff,
+        A200: #ffffff,
+        A400: #ffffff,
+        A700: #ffffff,
+    )
+);
+
+$mat-accent: (
+    50: #fffaed,
+    100: #fff4d1,
+    200: #ffecb3,
+    300: #ffe494,
+    400: #ffdf7d,
+    500: #ffd966,
+    600: #ffd55e,
+    700: #ffcf53,
+    800: #ffca49,
+    900: #ffc038,
+    A100: #ffffff,
+    A200: #ffffff,
+    A400: #fff5e1,
+    A700: #ffedc8,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #000000,
+        800: #000000,
+        900: #000000,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    ),
+);
+
+$primary: mat-palette($mat-primary);
+$accent: mat-palette($mat-accent);
+$theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($theme);
+
+$card-title-height: 44px;
+$card-header-font-size: 16px;
+$default-text: #666;
+$content-text: #666;
+$font-normal: 400;
+$bootstrap-panel-header-border: transparent;
+
+* body {
+    font-family: "Roboto", sans-serif;
+    color: $default-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    color: $default-text;
+}
+
+.card {
+    margin-bottom: 24px;
+    > .card-header {
+        background-color: #ffffff;
+        > .card-title {
+            font-weight: $font-normal;
+            font-size: $card-header-font-size;
+            text-transform: uppercase;
+            opacity: 0.9;
+            color: $content-text;
+            margin-bottom: 0;
+        }
+    }
+    > .card-body {
+        padding: 15px 22px;
+        height: 100%;
+    }
+}
+
+button {
+    &:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+nav.bg-light {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 5px 0px rgba(111, 111, 111, 0.2);
+    > .navbar-brand {
+        cursor: pointer;
+    }
+}
+
+.dropdown-menu {
+    left: -100px;
+}
+
+.form-group {
+    margin-bottom: 0;
+    mat-form-field {
+        width: 100%;
+    }
+}

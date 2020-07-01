@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light"> 
+  <!-- add any break point after navbar-expand (lg | md | sm)-->
+  <a class="navbar-brand">
+    <img src="assets/logo-1.svg" alt="ExamRoom.AI" width="175">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" 
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <button mat-button class="nav-link dropdown-toggle" id="candidates" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Candidates
+        </button>
+        <div class="dropdown-menu" aria-labelledby="candidates">
+          <button mat-button class="btn-block" routerLink="/candidates/add-candidates">Add candidates</button>
+          <button mat-button class="btn-block" routerLink="/candidates/edit-candidates">Edit candidates</button>
+          <button mat-button class="btn-block" routerLink="/candidates/search">Search</button>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <button mat-button class="nav-link dropdown-toggle" id="exams" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Exams
+        </button>
+        <div class="dropdown-menu" aria-labelledby="exams">
+          <button mat-button class="btn-block" routerLink="/exams/add-exams">Add exams</button>
+          <button mat-button class="btn-block" routerLink="/exams/update-exams">Update exams</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<main class="layout">
+  <router-outlet></router-outlet>
+</main>

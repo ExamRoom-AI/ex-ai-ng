@@ -16,8 +16,8 @@ This is a project which demonstrates the client intended features of [ExamRoom.A
 ## Installation
 Clone the app first.
 ```shell
-git clone https://github.com/ExamRroom-AI/ex-ai-ng
-cd ex-ai-ng
+git clone https://github.com/examroom-ai-sdk
+cd examroom-ai-sdk
 ```
 This app will install all the required dependencies automatically. 
 Just start the commands below in the root folder where you stored the package.
